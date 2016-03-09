@@ -116,7 +116,7 @@ circle {
 
 .cd-fixed-background.bg-1 {
   background-color: #BBBAB7;
-  background: url("../images/bg-1.jpeg") no-repeat;
+  background: url("../images/bg-2.jpg") no-repeat;
   /* pic source: https://unsplash.com/firmbee*/
   background-position: 50% 5%;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -126,7 +126,7 @@ circle {
 
 .cd-fixed-background.bg-2 {
   background-color: #4F5A5A;
-  background: url("../images/about-bg.jpeg") no-repeat;
+  background: url("../images/about-bg-2.jpg") no-repeat;
   /*pic source: https://unsplash.com/jordanfmcqueen*/
   background-position-y: 45%;
   background-size: cover;
@@ -135,7 +135,7 @@ circle {
 
 .cd-fixed-background.bg-3 {
   background-color: #808080;
-  background: url("../images/contact-bg3.jpeg") no-repeat;
+  background: url("../images/contact-bg3-2.jpg") no-repeat;
   /*pic source: www.gilleslambert.be/photography*/
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   background-size: cover;
