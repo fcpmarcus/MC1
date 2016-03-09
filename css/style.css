@@ -1,0 +1,471 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+/*  font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Nothing You Could Do', cursive;
+  color: #0f594d;
+}
+@media only screen and (min-width: 1048px) {
+  body {
+    /* hide horizontal scroll bar in IE */
+    overflow-x: hidden;
+  }
+}
+
+a {
+  color: #93a748;
+  text-decoration: none;
+}
+
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+.cd-header {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+rect {
+  margin: 0;
+  fill: none;
+  pointer-events: all;
+}
+
+circle {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.cd-header h1, .cd-header h2, .cd-header h3 {
+  width: 90%;
+  color: black;
+  text-align: center;
+  font-size: 2.2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  left: 50%;
+  top: 40%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+@media only screen and (min-width: 768px) {
+  .cd-header h1 {
+    font-size: 6rem;
+    font-weight: 300;
+  }
+}
+
+.cd-fixed-background {
+  position: relative;
+  padding: 3em 5% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.cd-fixed-background h2, .cd-fixed-background p {
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-fixed-background h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1em;
+}
+.cd-fixed-background p {
+  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+
+.cd-fixed-background .light-background h2, .cd-fixed-background .light-background p {
+  color: white;
+}
+
+.cd-fixed-background.bg-1 {
+  background-color: #BBBAB7;
+  background: url("../images/bg-1.jpeg") no-repeat;
+  /* pic source: https://unsplash.com/firmbee*/
+  background-position: 50% 5%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  z-index: 0;
+}
+
+.cd-fixed-background.bg-2 {
+  background-color: #4F5A5A;
+  background: url("../images/about-bg.jpeg") no-repeat;
+  /*pic source: https://unsplash.com/jordanfmcqueen*/
+  background-position-y: 45%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.cd-fixed-background.bg-3 {
+  background-color: #808080;
+  background: url("../images/contact-bg3.jpeg") no-repeat;
+  /*pic source: www.gilleslambert.be/photography*/
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+}
+
+.contact-info-group {
+
+}
+
+
+@media only screen and (min-width: 768px) {
+  .cd-fixed-background {
+    height: 100%;
+    padding: 0;
+  }
+  .cd-fixed-background h1, .cd-fixed-background h2, .cd-fixed-background h3 {
+    font-size: 3.6rem;
+    font-weight: 300;
+  }
+  .cd-fixed-background p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+  .cd-fixed-background .cd-content {
+    width: 50%;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+}
+@media only screen and (min-width: 1048px) {
+  .cd-fixed-background {
+    background-attachment: fixed;
+  }
+  .cd-fixed-background .cd-content {
+    max-width: 45%;
+    left: 8%;
+  }
+}
+
+.cd-vertical-nav {
+  position: fixed;
+  z-index: 2;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+}
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: transparent url(../images/cd-icon-arrow.svg) no-repeat center center;
+  -webkit-transition: opacity 0.2s 0s, visibility 0.2s 0s;
+  -moz-transition: opacity 0.2s 0s, visibility 0.2s 0s;
+  transition: opacity 0.2s 0s, visibility 0.2s 0s;
+}
+.cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+@media only screen and (min-width: 1200px) {
+  .cd-vertical-nav {
+    display: block;
+  }
+
+  .cd-fixed-background .cd-content {
+    max-width: 45%;
+    left: 8%;
+  }
+}
+
+.no-js .cd-vertical-nav {
+  display: none;
+}
+
+/* Common style */
+.grid figure {
+  box-shadow: 0 2px 5px black;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  height: auto;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+}
+
+.grid figure h2 span {
+  font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** project *****/
+/*---------------*/
+
+figure.effect-project {
+  background: #2f3238;
+}
+
+figure.effect-project img {
+  max-width: none;
+  height: 400px;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, transform 1s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+figure.effect-project figcaption {
+  text-align: left;
+}
+
+figure.effect-project h2 {
+  position: relative;
+  padding: 0.5em 0;
+  color: white;
+}
+
+figure.effect-project p {
+  display: inline-block;
+  margin: 0 0 0.25em;
+  padding: 0.4em 1em;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 75%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-360px,0,0);
+  transform: translate3d(-360px,0,0);
+}
+
+figure.effect-project p:first-child {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+figure.effect-project p:nth-of-type(2) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+figure.effect-project p:nth-of-type(3) {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+figure.effect-project:hover p:first-child {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+figure.effect-project:hover p:nth-of-type(2) {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+figure.effect-project:hover p:nth-of-type(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+figure.effect-project:hover img {
+  opacity: 0.4;
+  -webkit-transform: scale3d(1.1,1.1,1);
+  transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-project:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+form {
+  height: 400px;
+  max-width: 450px;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+form input, form textarea {
+  border: 3px solid #84859A;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px; 
+  font-family: 'Quicksand', sans-serif
+  }
+
+form input:focus, form textarea:focus {
+  outline: none;
+}
+
+
+form span {
+  color: white;
+}
+
+form [type="submit"] {
+  background: #FFF;
+  color: black;
+  font-size: 20px;
+  width: 50%;
+  margin-left: 120px; 
+  font-family: 'Quicksand', sans-serif
+}
+
+form [type="submit"]:hover {
+  background: #84859A;
+  color: white;
+  transition: all 0.25s ease-out .1s; 
+}
+
+form textarea {
+  height: 10em; 
+}
+
+/*form textarea:focus {
+  outline: none;
+  border-color: #E26A6A; 
+}*/
+
+form .contact-info-group label {
+  width: 50%;
+  padding-right: 10px;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+
+form .contact-info-group label:nth-child(1) {
+  padding-right: 5px; }
+form .contact-info-group label:nth-child(2) {
+  padding-left: 5px; }
+form label {
+display: block;
+margin-bottom: 20px; }
+form label span {
+  display: block; }
